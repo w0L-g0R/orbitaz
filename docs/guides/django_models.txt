@@ -1,0 +1,2 @@
+# Models
+https://sunscrapers.com/blog/6-expert-tips-for-building-better-django-models/

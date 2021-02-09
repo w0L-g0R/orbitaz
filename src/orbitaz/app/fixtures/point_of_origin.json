@@ -1,0 +1,83 @@
+[
+    {
+        "model": "app.pointoforigin",
+        "pk": 0,
+        "fields": {
+            "country": "Austria",
+            "country_acronym": "AT",
+            "eu": true
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 1,
+        "fields": {
+            "country": "Germany",
+            "country_acronym": "DE",
+            "eu": true
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 2,
+        "fields": {
+            "country": "Belgium",
+            "country_acronym": "BE",
+            "eu": true
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 3,
+        "fields": {
+            "country": "Netherlands",
+            "country_acronym": "NL",
+            "eu": true
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 4,
+        "fields": {
+            "country": "France",
+            "country_acronym": "FR",
+            "eu": true
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 5,
+        "fields": {
+            "country": "United States of America",
+            "country_acronym": "USA",
+            "eu": false
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 6,
+        "fields": {
+            "country": "Europe",
+            "country_acronym": "EUR",
+            "eu": false
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 7,
+        "fields": {
+            "country": "Switzerland",
+            "country_acronym": "CH",
+            "eu": false
+        }
+    },
+    {
+        "model": "app.pointoforigin",
+        "pk": 8,
+        "fields": {
+            "country": "Great Britain",
+            "country_acronym": "GB",
+            "eu": false
+        }
+    }
+]

@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////////
+
+Creating an environment from file named "environment.yml" :
+
+-> Use the terminal or an Anaconda Prompt and call:
+
+	conda env create -f environment.yml
+
+Sources:
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually
+
+https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db
+
+////////////////////////////////////////////////////////////////////////
+
+Updating the environment with file named "environment.yml":
+
+# if env is active
+conda deactivate
+
+# actual update
+conda env update -f environment.yml
+
+# Must be AFTER the conda env update line!
+activate my_environment_name
+
+Sources:
+
+https://stackoverflow.com/questions/42352841/how-to-update-an-existing-conda-environment-with-a-yml-file

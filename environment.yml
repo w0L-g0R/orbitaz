@@ -1,0 +1,31 @@
+name: orbitaz
+channels:
+  - defaults
+dependencies:
+  - pip
+  - Python>=3.9
+  - pip:
+      - black
+      - isort
+      - sphinx
+      - sphinx-rtd-theme
+      - rstcheck
+      - matplotlib
+      - pandas
+      - pathlib
+      - requests
+      - openpyxl
+      - coloredlogs
+      - django
+      - django-q
+      - django-test-migrations
+      - pytest-django
+      - pytest-dependency
+      - pytest-datafiles
+      - pytest-factoryboy
+      - pytest-excel
+      - psycopg2
+      - pysftp
+      - python-memcached
+      - python-decouple
+      - holidays

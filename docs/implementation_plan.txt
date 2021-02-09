@@ -1,0 +1,21 @@
+#) Celery Setup
+
+#) Logger Setup
+
+#) Testsuite Setup
+
+#) Github setup
+
+#) Write first dummy test:
+
+    -> Tests the logger to console and logger to file 
+
+    -> Test simple task
+
+-> Know the data, so you know how the model should look like
+
+    1) Web API requests
+
+        1.1) Setup CRON
+
+    2) Calculations

@@ -1,0 +1,3 @@
+# PEP8 detailed descriptions, used to lookup 
+
+https://realpython.com/python-pep8/

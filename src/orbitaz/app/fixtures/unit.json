@@ -1,0 +1,72 @@
+[
+    {
+        "model": "app.unit",
+        "pk": 0,
+        "fields": {
+            "currency": "Euro",
+            "currency_acronym": "EUR",
+            "measure": "Megawatt",
+            "measure_acronym": "MW"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 1,
+        "fields": {
+            "currency": "Dollar",
+            "currency_acronym": "USD",
+            "measure": "Barrel",
+            "measure_acronym": "bbl"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 2,
+        "fields": {
+            "currency": "Euro",
+            "currency_acronym": "EUR",
+            "measure": "Tonne",
+            "measure_acronym": "t"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 3,
+        "fields": {
+            "currency": "Euro",
+            "currency_acronym": "EUR",
+            "measure": "TausendLiter",
+            "measure_acronym": "1000L"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 4,
+        "fields": {
+            "currency": "Euro",
+            "currency_acronym": "EUR",
+            "measure": "Megawattstunde",
+            "measure_acronym": "MWh"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 5,
+        "fields": {
+            "currency": "Euro",
+            "currency_acronym": "EUR",
+            "measure": "Kilowattstunde",
+            "measure_acronym": "kWh"
+        }
+    },
+    {
+        "model": "app.unit",
+        "pk": 6,
+        "fields": {
+            "currency": NaN,
+            "currency_acronym": NaN,
+            "measure": NaN,
+            "measure_acronym": NaN
+        }
+    }
+]

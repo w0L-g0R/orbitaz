@@ -1,0 +1,120 @@
+
+This file summarizes different useful facts and hints about setting up a python package for python project.
+
+////////////////////////////////////////////////////////////////////////////////
+1) APPLY THE RIGHT PYTHON PROJECT STRUCTURE:
+////////////////////////////////////////////////////////////////////////////////
+
+	-> Separate src code and test code by using the following folder structure:
+	
+		package_name
+			├─ src
+			│  └─ package_name
+			│     ├─ __init__.py
+			│     └─ ...
+			├─ tests
+			│  └─ ...
+			├─ CHANGE.txt
+			├─ LICENSE.txt
+			├─ README.txt
+			└─ setup.py
+		
+	CHANGES.txt: 
+		log file that keeps track of changes for each release
+
+	LICENSE.txt: 
+		text file with license information (do choose one!)
+
+	README.txt: 
+		description of the package – should be written in ReST or Markdown (for PyPi):
+
+	setup.py: 
+		configuration file that stores your project as a packages within 	your python environment
+
+	-> For further information check the following resources:
+			
+			https://docs.pytest.org/en/latest/goodpractices.html
+			
+			https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure)
+			
+			https://hynek.me/articles/testing-packaging/
+			
+			https://github.com/pypa/packaging.python.org/issues/320
+			
+			https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
+			
+////////////////////////////////////////////////////////////////////////////////
+2) USE SETUP.PY TO PREVENT RELATIVE IMPORT ISSUES
+////////////////////////////////////////////////////////////////////////////////
+
+	-> TEMPLATE:
+	
+	 from setuptools import setup, find_packages
+
+		setup(
+		   name='your_package_name',
+		   version='0.1.0', 
+		   author='',
+		   author_email='',
+		   packages=find_packages(include=['your_package_name', 'your_package_name.*']),
+		   setup_requires=['pytest-runner', 'flake8'],
+		   tests_require=['pytest'],
+		   license='LICENSE.txt',
+		   description='A short but proper package description',
+		   long_description=open('README.txt').read(),
+		   install_requires=[
+				"pandas",
+				"request",
+		   ],
+		)
+	
+		For more explanations on setup.py specifications including e.g. the usage of setup.cfg and find_packages(), check out:
+		
+		https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/
+
+	-> 	INFO:
+
+		Executing setup.py puts your package into your local site-packages 		folder (as "your_venv/Lib/site-packages/your_package.egg-link" if 		executed with "python setup.py develop" or with "pip install -e", see 	next section)
+		
+		Even if your package isn't supposed to be on the official PyPI, using setup.py is still very helpful in order to prevent import pitfalls of your package within your python projects.
+
+	
+	-> 	INSTALL:
+
+		FIRST (create and) activate your virtual environment (if any exists)
+
+		In order to install your package from setup.py run the following:
+
+			pip install -e .
+		
+		The . here refers to the current working directory - the directory
+		where the setup.py has been places. 
+		
+		The -e flag specifies that we want to install in "editable" mode, which means that when we edit the FILES in our package we do not need to re-install the package before the changes come into effect. 
+		You will need to either restart python or reload the package though!
+
+		But when you EDIT INFORMATION in the setup.py itself you will need to re-install the package in most cases, and also if you ADD NEW (sub)packages. When in doubt, it can never hurt to re-install. Just run pip install -e . again.
+
+		This type of "development installation" (with "pip -e .") will actually not install the package but rather it will create a so called .egg-link to your project source code directory. This .egg-link is your connection to your env's site-packages, but instead of copying a full dependency to the site-packages it just adds this kind of symbolic link (the .egg-link acts as a multiplatform symbolic link).
+
+		That way you can edit the source code and see the changes directly without having to reinstall every time that you make a little change (as mentioned already above). 
+
+		Note: Make sure the right src path is given in the "your-package-name.egg-link" and the "easy-install.pth" files within your env's site-packages folder (e.g. "C:\Code\your_package_name\src")!
+
+			-> see: https://stackoverflow.com/questions/19602582/pip-install-editable-links-to-wrong-path
+
+	-> 	For additional information check the following resources:
+			
+			# Provides list of commands that can be used when calling "python setup.py"
+			https://pythonhosted.org/an_example_pypi_project/setuptools.html
+			
+			http://www.siafoo.net/article/77#install-vs-develop
+
+			https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install
+
+////////////////////////////////////////////////////////////////////////////////
+3) APPLYING AUTOMATED DOCUMENTATION WITH SPHINX & READ THE DOCS
+////////////////////////////////////////////////////////////////////////////////
+	
+	-> INSTALL VIDEO
+		https://www.youtube.com/watch?v=RvJ54ADcVno

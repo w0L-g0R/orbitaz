@@ -1,0 +1,1 @@
+print('commodity_products_arrays[0]: ', commodity_products_arrays[0])
