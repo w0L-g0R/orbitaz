@@ -6,7 +6,7 @@ setup(
     author="Wolfgang Goritschnig",
     author_email="",
     package_dir={"": "src"},
-    setup_requires=["black", "coloredlogs", "sphinx"],
+    setup_requires=["black", "mypy", "coloredlogs", "sphinx"],
     tests_require=[],
     license="LICENSE.md",
     description="orbitaz is a python package that provides data-driven energy analysis alongside related procedures to manage and host the results as a web service",
